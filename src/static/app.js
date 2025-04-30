@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const spotsLeft = details.max_participants - details.participants.length;
 
         const participantsList = details.participants.length
-          ? `<ul>${details.participants.map(participant => `<li>${participant}</li>`).join('')}</ul>`
-          : '<p>No participants yet.</p>';
+          ? `<div class="participants-container">${details.participants.map(participant => `<div class="participant-card"><i class="fas fa-user"></i> ${participant}</div>`).join('')}</div>`
+          : '<p class="no-participants">Nenhum participante ainda.</p>';
 
         activityCard.innerHTML = `
           <h4>${name}</h4>
